@@ -1,0 +1,80 @@
+/* Smooth transition for the dynamic hero background */
+#hero {
+    transition: background-image 1s ease-in-out;
+}
+
+/* --- Mobile / global responsiveness fixes --- */
+/* Ensure images and media never overflow their containers */
+img, video, picture {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Use border-box everywhere to avoid padding/width overflow on mobile */
+html {
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+/* Prevent long words / unbroken content from overflowing */
+html, body {
+    -webkit-text-size-adjust: 100%;
+}
+p, h1, h2, h3, h4, a, span, li, button {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+/* Force no horizontal scroll from unexpected elements */
+body {
+    overflow-x: hidden;
+}
+
+/* Ensure mobile menu covers full width but doesn't cause overflow */
+#mobile-menu {
+    left: 0;
+    right: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+nav {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* Make the hero headings scale smoothly on small screens */
+#hero {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+#hero h1 {
+    font-size: clamp(1.6rem, 6vw, 3.5rem);
+    line-height: 1.05;
+}
+#hero h2 {
+    font-size: clamp(1rem, 4.5vw, 2rem);
+}
+
+/* Ensure grid layouts collapse nicely on small screens */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* Small tweaks for navigation and big buttons */
+nav {
+    left: 0;
+    right: 0;
+}
+.inline-block {
+    word-break: normal;
+}
+/* Add this to style.css */
+img, video, div, section {
+    max-width: 100%;
+}

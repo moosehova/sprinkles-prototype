@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprinkles Confectioners | Order Online</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: { colors: { brand: { pink: '#ff2a85', dark: '#0f0f0f', card: '#1a1a1a' } } } }
+        }
+    </script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body class="bg-brand-dark text-white font-sans antialiased max-w-[100vw] overflow-x-hidden">
+
+    <div class="relative w-full overflow-x-hidden min-h-screen">
+
+        <div id="header-placeholder"></div>
+
+        <main>
+        <section id="about" class="max-w-4xl mx-auto py-16 px-4 text-center mt-8" data-aos="fade-up">
+            <h3 class="text-3xl font-bold mb-6 text-brand-pink">Crafted With Love & Precision</h3>
+            <p class="text-gray-400 leading-relaxed text-lg max-w-2xl mx-auto">
+                Every celebration deserves a centerpiece that looks as incredible as it tastes. We specialize in
+                premium, custom-made cakes tailored exactly to your vision.
+            </p>
+        </section>
+
+        <section id="menu" class="max-w-6xl mx-auto py-12 px-4" data-aos="fade-up">
+            <h3 class="text-2xl font-bold mb-10 text-center border-b border-gray-800 pb-4">Our Menu</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <div
+                    class="bg-brand-card p-5 rounded-2xl border border-gray-800 hover:border-brand-pink transition group flex flex-col justify-between">
+                    <div>
+                        <div class="h-56 rounded-xl mb-4 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1550617931-e17a7b70dce2?w=500&q=80"
+                                alt="Cupcakes"
+                                class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <h4 class="font-bold text-xl text-white">Signature Cupcakes (Box of 12)</h4>
+                        <p class="text-sm text-gray-400 mt-2 mb-4">Vanilla, chocolate, and strawberry mix. Perfect for
+                            sharing.</p>
+                    </div>
+                    <div>
+                        <p class="text-2xl font-bold text-brand-pink mb-4">ZMW 350.00</p>
+                        <button onclick="addToCart('Signature Cupcakes (12)', 350)"
+                            class="w-full bg-white/10 hover:bg-brand-pink text-white font-bold py-3 rounded-lg transition duration-300">Add
+                            to Cart</button>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-brand-card p-5 rounded-2xl border border-gray-800 hover:border-brand-pink transition group flex flex-col justify-between">
+                    <div>
+                        <div class="h-56 rounded-xl mb-4 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=500&q=80"
+                                alt="Cake"
+                                class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <h4 class="font-bold text-xl text-white">Custom Celebration Cake</h4>
+                        <p class="text-sm text-gray-400 mt-2 mb-4">2-Tier chocolate fudge cake with bespoke icing.</p>
+                    </div>
+                    <div>
+                        <p class="text-2xl font-bold text-brand-pink mb-4">ZMW 850.00</p>
+                        <button onclick="addToCart('Celebration Cake', 850)"
+                            class="w-full bg-white/10 hover:bg-brand-pink text-white font-bold py-3 rounded-lg transition duration-300">Add
+                            to Cart</button>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-brand-card p-5 rounded-2xl border border-gray-800 hover:border-brand-pink transition group flex flex-col justify-between">
+                    <div>
+                        <div class="h-56 rounded-xl mb-4 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?w=500&q=80"
+                                alt="Dessert"
+                                class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <h4 class="font-bold text-xl text-white">Mini Desserts Platter</h4>
+                        <p class="text-sm text-gray-400 mt-2 mb-4">24 bite-sized treats perfect for corporate events.
+                        </p>
+                    </div>
+                    <div>
+                        <p class="text-2xl font-bold text-brand-pink mb-4">ZMW 600.00</p>
+                        <button onclick="addToCart('Mini Desserts Platter', 600)"
+                            class="w-full bg-white/10 hover:bg-brand-pink text-white font-bold py-3 rounded-lg transition duration-300">Add
+                            to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="snack-bar" class="max-w-6xl mx-auto py-12 px-4 border-t border-gray-800" data-aos="fade-up">
+            <h3 class="text-2xl font-bold mb-2 text-center text-brand-pink">Savory Snack Bar</h3>
+            <p class="text-center text-gray-400 mb-10">Perfect for corporate events, parties, and quick bites. (Priced
+                per pack of 10)</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div
+                    class="bg-brand-card p-4 rounded-2xl border border-gray-800 hover:border-brand-pink transition flex justify-between items-center gap-4">
+                    <div class="flex-1">
+                        <h4 class="font-bold text-lg text-white">Mini Pizza (10)</h4>
+                        <p class="text-xs text-gray-400 mt-1 mb-2">Delicious bite-sized pizzas loaded with cheese &
+                            toppings.</p>
+                        <p class="text-xl font-bold text-brand-pink">ZMW 130.00</p>
+                    </div>
+                    <button onclick="addToCart('Mini Pizza (10)', 130)"
+                        class="bg-white/10 hover:bg-brand-pink text-white p-3 rounded-xl transition duration-300">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+
+                <div
+                    class="bg-brand-card p-4 rounded-2xl border border-gray-800 hover:border-brand-pink transition flex justify-between items-center gap-4">
+                    <div class="flex-1">
+                        <h4 class="font-bold text-lg text-white">Spring Rolls (10)</h4>
+                        <p class="text-xs text-gray-400 mt-1 mb-2">Crispy veggie rolls served with a tangy dip.</p>
+                        <p class="text-xl font-bold text-brand-pink">ZMW 100.00</p>
+                    </div>
+                    <button onclick="addToCart('Spring Rolls (10)', 100)"
+                        class="bg-white/10 hover:bg-brand-pink text-white p-3 rounded-xl transition duration-300">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+
+                <div
+                    class="bg-brand-card p-4 rounded-2xl border border-gray-800 hover:border-brand-pink transition flex justify-between items-center gap-4">
+                    <div class="flex-1">
+                        <h4 class="font-bold text-lg text-white">Sausage Roll (10)</h4>
+                        <p class="text-xs text-gray-400 mt-1 mb-2">Flaky pastry wrapped around seasoned sausage.</p>
+                        <p class="text-xl font-bold text-brand-pink">ZMW 150.00</p>
+                    </div>
+                    <button onclick="addToCart('Sausage Roll (10)', 150)"
+                        class="bg-white/10 hover:bg-brand-pink text-white p-3 rounded-xl transition duration-300">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+
+                <div
+                    class="bg-brand-card p-4 rounded-2xl border border-gray-800 hover:border-brand-pink transition flex justify-between items-center gap-4">
+                    <div class="flex-1">
+                        <h4 class="font-bold text-lg text-white">Samoosas (10)</h4>
+                        <p class="text-xs text-gray-400 mt-1 mb-2">Crispy pastry filled with spiced goodness.</p>
+                        <p class="text-xl font-bold text-brand-pink">ZMW 100.00</p>
+                    </div>
+                    <button onclick="addToCart('Samoosas (10)', 100)"
+                        class="bg-white/10 hover:bg-brand-pink text-white p-3 rounded-xl transition duration-300">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+
+                <div
+                    class="bg-brand-card p-4 rounded-2xl border border-gray-800 hover:border-brand-pink transition flex justify-between items-center gap-4">
+                    <div class="flex-1">
+                        <h4 class="font-bold text-lg text-white">BBQ Meat Balls (10)</h4>
+                        <p class="text-xs text-gray-400 mt-1 mb-2">Juicy meat balls tossed in a smoky BBQ sauce.</p>
+                        <p class="text-xl font-bold text-brand-pink">ZMW 140.00</p>
+                    </div>
+                    <button onclick="addToCart('BBQ Meat Balls (10)', 140)"
+                        class="bg-white/10 hover:bg-brand-pink text-white p-3 rounded-xl transition duration-300">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+
+                <div
+                    class="bg-brand-card p-4 rounded-2xl border border-gray-800 hover:border-brand-pink transition flex justify-between items-center gap-4">
+                    <div class="flex-1">
+                        <h4 class="font-bold text-lg text-white">Milk Scones (10)</h4>
+                        <p class="text-xs text-gray-400 mt-1 mb-2">Soft, buttery scones perfect with tea.</p>
+                        <p class="text-xl font-bold text-brand-pink">ZMW 120.00</p>
+                    </div>
+                    <button onclick="addToCart('Milk Scones (10)', 120)"
+                        class="bg-white/10 hover:bg-brand-pink text-white p-3 rounded-xl transition duration-300">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+                <div
+                    class="bg-brand-card p-4 rounded-2xl border border-gray-800 hover:border-brand-pink transition flex justify-between items-center gap-4">
+                    <div class="flex-1">
+                        <h4 class="font-bold text-lg text-white">Frosted Cupcakes (10)</h4>
+                        <p class="text-xs text-gray-400 mt-1 mb-2">Soft cupcakes topped with creamy, sweet frosting.</p>
+                        <p class="text-xl font-bold text-brand-pink">ZMW 300.00</p>
+                    </div>
+                    <button onclick="addToCart('Frosted Cupcakes (10)', 300)"
+                        class="bg-white/10 hover:bg-brand-pink text-white p-3 rounded-xl transition duration-300">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+
+                <div
+                    class="bg-brand-card p-4 rounded-2xl border border-gray-800 hover:border-brand-pink transition flex justify-between items-center gap-4">
+                    <div class="flex-1">
+                        <h4 class="font-bold text-lg text-white">Muffins (10)</h4>
+                        <p class="text-xs text-gray-400 mt-1 mb-2">Moist and fluffy muffins in every bite.</p>
+                        <p class="text-xl font-bold text-brand-pink">ZMW 100.00</p>
+                    </div>
+                    <button onclick="addToCart('Muffins (10)', 100)"
+                        class="bg-white/10 hover:bg-brand-pink text-white p-3 rounded-xl transition duration-300">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section id="kids-menu" class="max-w-6xl mx-auto py-16 px-4 border-t border-gray-800" data-aos="fade-up">
+            <div class="text-center mb-10">
+                <h3 class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-brand-pink inline-block mb-2"
+                    style="font-family: cursive;">Kid's Snack Menu</h3>
+                <p class="text-gray-400">The perfect bite-sized treats for children's parties. (Priced per pack of 10)
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <div
+                    class="bg-gray-900/50 p-4 rounded-2xl border border-purple-500/30 hover:border-purple-400 transition flex justify-between items-center gap-4">
+                    <div class="flex-1">
+                        <h4 class="font-bold text-lg text-white">Mini Burgers (10)</h4>
+                        <p class="text-xs text-purple-300/70 mt-1 mb-2">Perfect kid-sized beef patties.</p>
+                        <p class="text-xl font-bold text-purple-400">ZMW 250.00</p>
+                    </div>
+                    <button onclick="addToCart('Kid\'s Mini Burgers (10)', 250)"
+                        class="bg-purple-500/20 hover:bg-purple-500 text-white p-3 rounded-xl transition duration-300">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+
+                <div
+                    class="bg-gray-900/50 p-4 rounded-2xl border border-purple-500/30 hover:border-purple-400 transition flex justify-between items-center gap-4">
+                    <div class="flex-1">
+                        <h4 class="font-bold text-lg text-white">Hungarian Quarters (10)</h4>
+                        <p class="text-xs text-purple-300/70 mt-1 mb-2">Tasty Hungarian sausage pieces.</p>
+                        <p class="text-xl font-bold text-purple-400">ZMW 150.00</p>
+                    </div>
+                    <button onclick="addToCart('Hungarian Quarters (10)', 150)"
+                        class="bg-purple-500/20 hover:bg-purple-500 text-white p-3 rounded-xl transition duration-300">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+
+                <div
+                    class="bg-gray-900/50 p-4 rounded-2xl border border-purple-500/30 hover:border-purple-400 transition flex justify-between items-center gap-4">
+                    <div class="flex-1">
+                        <h4 class="font-bold text-lg text-white">Fruit Kebabs (10)</h4>
+                        <p class="text-xs text-purple-300/70 mt-1 mb-2">Fresh seasonal fruits on a stick.</p>
+                        <p class="text-xl font-bold text-purple-400">ZMW 150.00</p>
+                    </div>
+                    <button onclick="addToCart('Fruit Kebabs (10)', 150)"
+                        class="bg-purple-500/20 hover:bg-purple-500 text-white p-3 rounded-xl transition duration-300">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+
+                <div
+                    class="bg-gray-900/50 p-4 rounded-2xl border border-purple-500/30 hover:border-purple-400 transition flex justify-between items-center gap-4">
+                    <div class="flex-1">
+                        <h4 class="font-bold text-lg text-white">Kid's Sausage Rolls (10)</h4>
+                        <p class="text-xs text-purple-300/70 mt-1 mb-2">Flaky pastry, kid-friendly sizing.</p>
+                        <p class="text-xl font-bold text-purple-400">ZMW 150.00</p>
+                    </div>
+                    <button onclick="addToCart('Kid\'s Sausage Rolls (10)', 150)"
+                        class="bg-purple-500/20 hover:bg-purple-500 text-white p-3 rounded-xl transition duration-300">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+
+                <div
+                    class="bg-gray-900/50 p-4 rounded-2xl border border-purple-500/30 hover:border-purple-400 transition flex justify-between items-center gap-4">
+                    <div class="flex-1">
+                        <h4 class="font-bold text-lg text-white">Kid's Samosas (10)</h4>
+                        <p class="text-xs text-purple-300/70 mt-1 mb-2">Mildly spiced, perfect for kids.</p>
+                        <p class="text-xl font-bold text-purple-400">ZMW 100.00</p>
+                    </div>
+                    <button onclick="addToCart('Kid\'s Samosas (10)', 100)"
+                        class="bg-purple-500/20 hover:bg-purple-500 text-white p-3 rounded-xl transition duration-300">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+
+                <div
+                    class="bg-gray-900/50 p-4 rounded-2xl border border-purple-500/30 hover:border-purple-400 transition flex justify-between items-center gap-4">
+                    <div class="flex-1">
+                        <h4 class="font-bold text-lg text-white">Kid's Cupcakes (10)</h4>
+                        <p class="text-xs text-purple-300/70 mt-1 mb-2">Fun colors and sprinkles.</p>
+                        <p class="text-xl font-bold text-purple-400">ZMW 150.00</p>
+                    </div>
+                    <button onclick="addToCart('Kid\'s Cupcakes (10)', 150)"
+                        class="bg-purple-500/20 hover:bg-purple-500 text-white p-3 rounded-xl transition duration-300">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="services" class="max-w-7xl mx-auto py-20 px-4 border-t border-gray-800">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h3 class="text-4xl font-bold mb-4 text-brand-pink" style="font-family: cursive;">Our Services</h3>
+                <p class="text-gray-400 max-w-2xl mx-auto text-lg">Beyond our daily menu, we offer full-service catering and custom experiences designed to make your special moments unforgettable.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-brand-card rounded-2xl border border-gray-800 overflow-hidden hover:border-brand-pink transition group flex flex-col" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-48 overflow-hidden relative">
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-transparent transition duration-500 z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1555507036-ab1f40ce88cb?w=600&q=80" alt="Corporate Catering" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <div class="bg-brand-pink/10 w-12 h-12 rounded-full flex items-center justify-center mb-6 text-brand-pink border border-brand-pink/20">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <h4 class="text-2xl font-bold text-white mb-3">Corporate Catering</h4>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-8 flex-1">Impress your clients and treat your team. We provide bulk pastry orders, dessert platters, and branded cupcakes for board meetings and office parties.</p>
+                        <a href="https://wa.me/260977828035" target="_blank" class="text-brand-pink font-bold hover:text-white transition flex items-center gap-2 text-sm uppercase tracking-wider mt-auto">Inquire Now <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></a>
+                    </div>
+                </div>
+
+                <div class="bg-brand-card rounded-2xl border border-gray-800 overflow-hidden hover:border-brand-pink transition group flex flex-col" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-48 overflow-hidden relative">
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-transparent transition duration-500 z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1535254973040-607b474cb50d?w=600&q=80" alt="Weddings" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <div class="bg-brand-pink/10 w-12 h-12 rounded-full flex items-center justify-center mb-6 text-brand-pink border border-brand-pink/20">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                        </div>
+                        <h4 class="text-2xl font-bold text-white mb-3">Weddings & Events</h4>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-8 flex-1">From breathtaking multi-tier wedding cakes to elegant dessert tables, we work closely with you to design sweet masterpieces for your big day.</p>
+                        <a href="https://wa.me/260977828035" target="_blank" class="text-brand-pink font-bold hover:text-white transition flex items-center gap-2 text-sm uppercase tracking-wider mt-auto">Book Consultation <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></a>
+                    </div>
+                </div>
+
+                <div class="bg-brand-card rounded-2xl border border-gray-800 overflow-hidden hover:border-brand-pink transition group flex flex-col" data-aos="fade-up" data-aos-delay="300">
+                    <div class="h-48 overflow-hidden relative">
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-transparent transition duration-500 z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?w=600&q=80" alt="Deliveries" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <div class="bg-brand-pink/10 w-12 h-12 rounded-full flex items-center justify-center mb-6 text-brand-pink border border-brand-pink/20">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path></svg>
+                        </div>
+                        <h4 class="text-2xl font-bold text-white mb-3">Surprise Deliveries</h4>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-8 flex-1">Make their day special with custom birthday cakes and treat boxes delivered directly to their doorstep anywhere in Lusaka.</p>
+                        <a href="https://wa.me/260977828035" target="_blank" class="text-brand-pink font-bold hover:text-white transition flex items-center gap-2 text-sm uppercase tracking-wider mt-auto">Schedule Delivery <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="gallery" class="max-w-6xl mx-auto py-12 px-4 text-center border-t border-gray-800 mb-20"
+            data-aos="fade-up">
+            <h3 class="text-2xl font-bold mb-4">Gallery</h3>
+            <p class="text-gray-400">Follow us on Instagram to see our latest creations.</p>
+        </section>
+
+            <section id="custom-order" class="max-w-4xl mx-auto py-16 px-4 mb-10" data-aos="fade-up">
+                <div class="bg-brand-card p-8 md:p-10 rounded-3xl border border-gray-800 shadow-2xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-brand-pink/5 rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none"></div>
+
+                    <div class="text-center mb-10 relative z-10">
+                        <h3 class="text-3xl font-bold mb-3 text-brand-pink" style="font-family: cursive;">Request a Custom Cake</h3>
+                        <p class="text-gray-400">Got a wedding, anniversary, or special theme? Tell us what you need, and we'll bring it to life!</p>
+                    </div>
+
+                    <form id="customCakeForm" class="space-y-6 relative z-10" onsubmit="sendCustomOrder(event)">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Your Name</label>
+                                <input type="text" id="co-name" class="w-full bg-gray-900 border border-gray-700 rounded-xl p-4 text-white focus:outline-none focus:border-brand-pink transition" required>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Phone Number</label>
+                                <input type="tel" id="co-phone" placeholder="097..." class="w-full bg-gray-900 border border-gray-700 rounded-xl p-4 text-white focus:outline-none focus:border-brand-pink transition" required>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Date of Event</label>
+                                <input type="date" id="co-date" class="w-full bg-gray-900 border border-gray-700 rounded-xl p-4 text-white focus:outline-none focus:border-brand-pink transition" required>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Number of Guests</label>
+                                <input type="number" id="co-guests" placeholder="E.g., 50" class="w-full bg-gray-900 border border-gray-700 rounded-xl p-4 text-white focus:outline-none focus:border-brand-pink transition" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Cake Details & Theme</label>
+                            <textarea id="co-details" rows="4" placeholder="Describe the theme, colors, flavors, and any writing on the cake..." class="w-full bg-gray-900 border border-gray-700 rounded-xl p-4 text-white focus:outline-none focus:border-brand-pink transition" required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-brand-pink text-white font-bold text-lg py-4 rounded-xl hover:bg-pink-600 transition shadow-[0_0_20px_rgba(255,42,133,0.4)] flex justify-center items-center gap-2">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                            Send Inquiry via WhatsApp
+                        </button>
+                    </form>
+                </div>
+            </section>
+    </main>
+
+        <div id="footer-placeholder"></div>
+
+    </div>
+
+    <div id="cart-sidebar"
+        class="fixed top-0 right-0 h-full w-full md:w-96 bg-brand-card border-l border-brand-pink/30 shadow-2xl z-[100] transform translate-x-full transition-transform duration-300 flex flex-col">
+        <div class="p-6 border-b border-gray-800 flex justify-between items-center">
+            <h3 class="text-2xl font-bold text-brand-pink">Your Order</h3>
+            <button onclick="toggleCart()" class="text-gray-400 hover:text-white transition">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </button>
+        </div>
+
+        <div id="cart-items" class="p-6 flex-1 overflow-y-auto space-y-4">
+            <p class="text-gray-500 text-center mt-10">Your cart is empty.</p>
+        </div>
+
+        <div class="p-6 border-t border-gray-800 bg-black/50">
+            <div class="flex justify-between items-center mb-6">
+                <span class="text-lg font-bold">Total:</span>
+                <span id="cart-total" class="text-2xl font-bold text-brand-pink">ZMW 0.00</span>
+            </div>
+
+            <div id="checkout-fields" class="space-y-4 hidden">
+                <input type="text" id="customerName" placeholder="Full Name"
+                    class="w-full bg-gray-900 border border-gray-700 rounded-lg p-3 text-white focus:outline-none focus:border-brand-pink"
+                    required>
+                <input type="tel" id="customerPhone" placeholder="Phone (097...)"
+                    class="w-full bg-gray-900 border border-gray-700 rounded-lg p-3 text-white focus:outline-none focus:border-brand-pink"
+                    required>
+                <input type="email" id="customerEmail" placeholder="Email Address"
+                    class="w-full bg-gray-900 border border-gray-700 rounded-lg p-3 text-white focus:outline-none focus:border-brand-pink"
+                    required>
+
+                <button type="button" onClick="getPaidWithLenco()"
+                    class="w-full bg-brand-pink text-white font-bold text-lg py-4 rounded-lg mt-2 hover:bg-pink-600 transition duration-300 shadow-lg flex justify-center items-center gap-2">
+                    Pay securely with Lenco
+                </button>
+            </div>
+        </div>
+    </div>
+    <div id="cart-overlay" onclick="toggleCart()" class="fixed inset-0 bg-black/60 z-[90] hidden backdrop-blur-sm">
+    </div>
+    <a href="https://wa.me/260977828035" target="_blank"
+        class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-[0_0_20px_rgba(37,211,102,0.4)] hover:scale-110 transition-transform duration-300 flex items-center justify-center">
+        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+        </svg>
+    </a>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://pay.sandbox.lenco.co/js/v1/inline.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
