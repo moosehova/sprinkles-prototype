@@ -78,3 +78,18 @@ nav {
 img, video, div, section {
     max-width: 100%;
 }
+
+/* Fix flex-item overflow on small screens (prevents content like long words or prices from forcing overflow) */
+.flex-1 {
+    min-width: 0;
+}
+
+/* Ensure custom card containers clip any overflowing children */
+.bg-brand-card {
+    overflow: hidden;
+}
+
+/* Make buttons and interactive controls able to shrink on very small screens */
+button, .w-full {
+    min-width: 0;
+}
