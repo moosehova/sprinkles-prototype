@@ -93,3 +93,20 @@ img, video, div, section {
 button, .w-full {
     min-width: 0;
 }
+
+/* Floating cart button and badges must not be clipped by parent overflow */
+#floating-cart-btn {
+    overflow: visible;
+}
+
+#floating-cart-badge,
+#cart-count {
+    z-index: 9999;
+    position: absolute;
+    transform: translateZ(0);
+}
+
+/* Ensure small absolute badges are visible on devices with rounded containers */
+.rounded-full > .absolute {
+    overflow: visible;
+}
